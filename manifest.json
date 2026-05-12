@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "QuantumTutor",
+  "version": "2.0",
+  "permissions": ["scripting", "activeTab", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["https://pennylane.ai/*"],
+      "js": ["config.js", "helpers.js", "main.js"],
+      "css": ["button_style.css"]
+    }
+  ],
+  "action": {
+    "default_title": "Capture Form"
+  }
+}
